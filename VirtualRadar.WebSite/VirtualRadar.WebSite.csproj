@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EACC3459-9586-4977-A664-AE5827699B30}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VirtualRadar.WebSite</RootNamespace>
+    <AssemblyName>VirtualRadar.WebSite</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>1570 1587</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <DocumentationFile>bin\x86\Release\VirtualRadar.WebSite.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AircraftListJsonBuilder.cs" />
+    <Compile Include="AircraftListJsonBuilderArgs.cs" />
+    <Compile Include="AircraftListJsonBuilderFilter.cs" />
+    <Compile Include="AircraftListJsonPage.cs" />
+    <Compile Include="AudioPage.cs" />
+    <Compile Include="FaviconPage.cs" />
+    <Compile Include="FontCache.cs" />
+    <Compile Include="ImagePage.cs" />
+    <Compile Include="Implementations.cs" />
+    <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="Page.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ClosestAircraftJsonPage.cs" />
+    <Compile Include="ReportRowsJsonPage.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TextPage.cs" />
+    <Compile Include="WebSite.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InterfaceFactory\InterfaceFactory.csproj">
+      <Project>{6AD23CD7-FB9F-448E-85EA-CB5AAA4E9FEE}</Project>
+      <Name>InterfaceFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VirtualRadar.Interface\VirtualRadar.Interface.csproj">
+      <Project>{8EF81105-F45D-4EDB-996C-DE7D5644B1E7}</Project>
+      <Name>VirtualRadar.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VirtualRadar.Resources\VirtualRadar.Resources.csproj">
+      <Project>{B74413AC-8898-45DA-B4BD-82E4F9F58D72}</Project>
+      <Name>VirtualRadar.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site\Diagnostics\AircraftList.htm" />
+    <Content Include="Site\Common.js" />
+    <Content Include="Site\Events.js" />
+    <Content Include="Site\GoogleMap\GoogleMap.htm" />
+    <Content Include="Site\GoogleMap\GoogleMap.js" />
+    <Content Include="Site\GoogleMap\GoogleMapAircraftCollection.js" />
+    <Content Include="Site\GoogleMap\GoogleMapAircraftDetail.js" />
+    <Content Include="Site\GoogleMap\GoogleMapAircraftList.js" />
+    <Content Include="Site\GoogleMap\GoogleMapAircraftListColumns.js" />
+    <Content Include="Site\GoogleMap\GoogleMapAircraftListOptions.js" />
+    <Content Include="Site\GoogleMap\GoogleMapAudio.js" />
+    <Content Include="Site\GoogleMap\GoogleMapAutoSelect.js" />
+    <Content Include="Site\GoogleMap\GoogleMapCurrentLocation.js" />
+    <Content Include="Site\GoogleMap\GoogleMapGeolocation.js" />
+    <Content Include="Site\GoogleMap\GoogleMapGotoCurrentLocationButton.js" />
+    <Content Include="Site\GoogleMap\GoogleMapInfoButton.js" />
+    <Content Include="Site\GoogleMap\GoogleMapMarker.js" />
+    <Content Include="Site\GoogleMap\GoogleMapMarkerCollection.js" />
+    <Content Include="Site\GoogleMap\GoogleMapMovingMapControl.js" />
+    <Content Include="Site\GoogleMap\GoogleMapOptions.js" />
+    <Content Include="Site\GoogleMap\GoogleMapOptionsUI.js" />
+    <Content Include="Site\GoogleMap\GoogleMapOutline.js" />
+    <Content Include="Site\GoogleMap\GoogleMapReverseGeocode.js" />
+    <Content Include="Site\GoogleMap\GoogleMapSidebar.js" />
+    <Content Include="Site\GoogleMap\GoogleMapStylesheet.css" />
+    <Content Include="Site\GoogleMap\GoogleMapTimeout.js" />
+    <Content Include="Site\GoogleMap\GoogleMapVolumeControl.js" />
+    <Content Include="Site\GoogleMap\MarkerWithLabel.min.js" />
+    <Content Include="Site\iPhone\iPhoneMap.htm" />
+    <Content Include="Site\iPhone\iPhoneMapAircraftDetail.js" />
+    <Content Include="Site\iPhone\iPhoneMapInfoWindow.js" />
+    <Content Include="Site\iPhone\iPhoneMapOptionsUI.js" />
+    <Content Include="Site\iPhone\iPhoneMapPages.js" />
+    <Content Include="Site\iPhone\iPhoneMapPlaneList.js" />
+    <Content Include="Site\iPhone\iPhoneMapStylesheet.css" />
+    <Content Include="Site\jQuery\jQuery-1.6.4.js" />
+    <Content Include="Site\jQuery\jQuery-1.6.4.min.js" />
+    <Content Include="Site\Reports\AircraftReport.htm" />
+    <Content Include="Site\Reports\DateReport.js" />
+    <Content Include="Site\Reports\DateReportCriteria.js" />
+    <Content Include="Site\Reports\FlightReport.htm" />
+    <Content Include="Site\Reports\IcaoReport.js" />
+    <Content Include="Site\Reports\IcaoReportCriteria.js" />
+    <Content Include="Site\Reports\RegReport.js" />
+    <Content Include="Site\Reports\RegReportCriteria.js" />
+    <Content Include="Site\Reports\Report.js" />
+    <Content Include="Site\Reports\ReportAircraftDetail.js" />
+    <Content Include="Site\Reports\ReportAircraftFlights.js" />
+    <Content Include="Site\Reports\ReportCriteria.js" />
+    <Content Include="Site\Reports\ReportFlights.js" />
+    <Content Include="Site\Reports\ReportFlightsDetail.js" />
+    <Content Include="Site\Reports\ReportMap.js" />
+    <Content Include="Site\Reports\ReportPageControl.js" />
+    <Content Include="Site\Reports\ReportPrintStylesheet.css" />
+    <Content Include="Site\Reports\ReportRowProvider.js" />
+    <Content Include="Site\Reports\ReportScreenStylesheet.css" />
+    <Content Include="Site\ServerConfig.js" />
+    <Content Include="Site\XHR.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
